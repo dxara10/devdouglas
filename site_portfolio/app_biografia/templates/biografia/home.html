@@ -1,0 +1,29 @@
+{% extends 'biografia/base.html' %}
+{% block conteudo %}
+
+<div ( style = 'font-size:60px')>
+  <h1 style="text-align: center;" class="container"><br><br><br><br><br><br>OI, EU SOU O DOUGLAS<br><br></h1>
+  <h2 style="text-align: center;" class="container">
+    REACT 
+    <a class="btn btn-light" href="https://www.linkedin.com/in/douglas-cortes-2b315b82/" role="button"><i class="fa-brands fa-linkedin" style="color: blue;"></i></a>
+    <a class="btn btn-light" href="https://github.com/dxara10" role="button"><i class="fa-brands fa-github" style="color: blue;"></i></a>
+    <a class="btn btn-light" href="curriculo/" role="button"><i class="fa-solid fa-folder" style="color: blue;"></i></a>
+    <br>
+    DEVELOPER
+    <br><br>
+  </h2>
+</div>
+
+<h3 style="text-align: right;" class="container">Tenho 29 anos, sou desenvolvedor full stack,<br>analista e cientista de dados,<br>com 3 anos trabalhando como freelancer<br> e 1 ano em emprego formal!</h3><br><br><br><br>
+
+<form action="{% url 'lista_contatos' %}" method="post">
+  {% csrf_token %}
+  <div style="text-align: center;" class="container">
+    <h4 style="text-align: center;" class="container">Precisa de ajuda?<br> Deixe seu contato:</h4><br><br>
+      Nome <input name="Nome" class="form-control-sm" type="text"><br><br>
+      E-mail <input name="Email" class="form-control-sm" type="email"><br><br>
+      Telefone <input name="Telefone" class="form-control-sm" type="text"><br><br>
+    <button class="form-control-sm">Enviar</button><br><br>
+  </div>
+</form>
+{% endblock %}
